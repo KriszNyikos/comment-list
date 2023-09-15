@@ -1,0 +1,47 @@
+.form-container {
+  @apply w-125 flex flex-col gap-3 border border-slate-400 rounded-md p-2;
+}
+
+.text-input {
+  @apply border p-2 rounded-md;
+}
+
+.text-area {
+  @apply border h-20 rounded-md p-2;
+}
+
+.error-input {
+  @apply border-red-300;
+}
+
+.tag-container {
+  @apply flex flex-col gap-2;
+}
+
+.tag-row {
+  @apply flex gap-2;
+}
+
+.tag {
+  @apply h-6 p-1 flex items-center gap-1 rounded-2xl border bg-slate-100 text-sm;
+}
+
+.remove-tag {
+  @apply cursor-pointer;
+}
+
+.button-row {
+  @apply flex justify-end gap-3;
+}
+
+.add-button {
+  @apply bg-slate-200 hover:bg-slate-300;
+}
+
+.remove-button {
+  @apply bg-orange-100 hover:bg-orange-200;
+}
+
+.inactive-button {
+  @apply text-slate-400 bg-slate-50 cursor-default hover:bg-slate-50;
+}

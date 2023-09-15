@@ -1,0 +1,11 @@
+  <span *ngIf="availableTags.length">{{ 'common.filter' | translate }}:</span>
+
+  <div class="filter-list">
+    <div
+      *ngFor="let tag of availableTags; trackBy: trackBy"
+      class="filter-item"
+      [class.selected-filter]="isTagSelected(selectedTags, tag)"
+      (click)="filterTags(tag)">
+      {{ tag }}
+    </div>
+  </div>

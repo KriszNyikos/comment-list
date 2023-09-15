@@ -1,0 +1,23 @@
+{
+  "common": {
+    "title": "Comment List",
+    "filter": "Filter",
+    "save": "Save",
+    "cancel": "Cancel",
+    "comments": "Comments",
+    "edit": "Edit",
+    "remove": "Remove",
+    "add": "Add",
+    "toggleLanguage": "Toggle Language",
+    "noComments": "No comments"
+  },
+  "form": {
+    "addTitlePlaceholder": "add title",
+    "addNewTagButton": "Add a new tag",
+    "typeTagPlaceholder": "type tag here",
+    "actualTag": "Actual tags",
+    "addNewComment": "Add new comment",
+    "saveNewTag": "Save new tag",
+    "existingTagError": "You cannot save an existing tag"
+  }
+}

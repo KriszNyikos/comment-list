@@ -1,0 +1,27 @@
+.comment-container {
+  @apply flex flex-col gap-3 p-3 border border-slate-400 w-125 mb-3 rounded-lg;
+}
+
+.comment-form-container {
+  @apply mb-3;
+}
+
+.tag-list {
+  @apply flex gap-2;
+}
+
+.tag-element {
+  @apply h-5 p-1 flex items-center rounded-2xl border bg-slate-100 text-sm;
+}
+
+.button-row {
+  @apply flex justify-end gap-2;
+}
+
+.save-button {
+  @apply bg-slate-200 hover:bg-slate-300;
+}
+
+.remove-button {
+  @apply bg-orange-100 hover:bg-orange-200;
+}

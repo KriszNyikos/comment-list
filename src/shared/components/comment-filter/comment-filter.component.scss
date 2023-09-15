@@ -1,0 +1,15 @@
+:host {
+  @apply flex items-center gap-3;
+}
+
+.filter-item {
+  @apply h-5 p-1 flex items-center rounded-2xl border bg-slate-200 cursor-pointer text-sm hover:bg-slate-300;
+}
+
+.selected-filter {
+  @apply bg-slate-400;
+}
+
+.filter-list {
+  @apply flex items-center gap-1;
+}

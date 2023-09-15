@@ -1,0 +1,31 @@
+<ng-container *ngTemplateOutlet="!isEditing ? commentView : editView"></ng-container>
+
+<ng-template #commentView>
+  <div class="comment-container">
+    <div>
+      {{ comment.title }}
+    </div>
+
+    <div [innerHTML]="comment.text | safe: 'html'"></div>
+
+    <div class="tag-list">
+      <div *ngFor="let tag of comment.tags; trackBy: trackBy" class="tag-element">{{ tag }}</div>
+    </div>
+
+    <div class="button-row">
+      <button class="button save-button" type="button" (click)="toggleEditing()">{{ 'common.edit' | translate }}</button>
+      <button class="button remove-button" type="button" (click)="remove()">{{ 'common.remove' | translate }}</button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #editView>
+  <div class="comment-form-container">
+    <app-comment-form
+      [comment]="comment"
+      (saveComment)="save($event)"
+      (cancelSaving)="toggleEditing()"
+      [availableTags]="availableTags">
+    </app-comment-form>
+  </div>
+</ng-template>

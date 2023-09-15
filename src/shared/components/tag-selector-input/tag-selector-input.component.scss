@@ -1,0 +1,11 @@
+.tag-selector-container {
+  @apply flex gap-3 items-center;
+}
+
+.text-input {
+  @apply p-2 border rounded-md;
+}
+
+.available-tag-list {
+  @apply w-24 border border-slate-700 rounded-md bg-slate-50 text-left p-2;
+}

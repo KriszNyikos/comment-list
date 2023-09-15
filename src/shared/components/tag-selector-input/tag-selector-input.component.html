@@ -1,0 +1,18 @@
+<div cdkOverlayOrigin #trigger="cdkOverlayOrigin" class="tag-selector-container">
+  <input
+    class="text-input"
+    [formControl]="tagFormControl"
+    type="text"
+    [placeholder]="'form.typeTagPlaceholder' | translate">
+
+  <button class="button" (click)="saveTag()">{{ 'form.saveNewTag' | translate }}</button>
+</div>
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="isOverlayOpened">
+  <ul class="available-tag-list">
+    <li *ngFor="let tag of filteredTags; trackBy: trackBy" (click)="selectTag(tag)">{{ tag }}</li>
+  </ul>
+</ng-template>

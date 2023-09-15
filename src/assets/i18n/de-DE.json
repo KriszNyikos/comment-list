@@ -1,0 +1,23 @@
+{
+  "common": {
+    "title": "Commentare listen",
+    "filter": "Filtern",
+    "save": "Speichern",
+    "cancel": "Stornieren",
+    "comments": "Kommentare",
+    "edit": "Bearbeiten",
+    "remove": "Entferner",
+    "add": "Hinzufügen",
+    "toggleLanguage": "Sprache umschalten",
+    "noComments": "Keine kommentare"
+  },
+  "form": {
+    "addTitlePlaceholder": "Titel hinzufügen",
+    "addNewTagButton": "Neues Tag hinzufügen",
+    "typeTagPlaceholder": "Geben Sie hier das Tag ein",
+    "actualTag": "Aktuell tag-en",
+    "addNewComment": "Neuen Kommentar schreiben",
+    "saveNewTag": "Neues Tag speichern",
+    "existingTagError": "Sie können einen bestehenden Tag nicht speichern"
+  }
+}

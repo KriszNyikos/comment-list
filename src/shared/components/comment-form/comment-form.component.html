@@ -1,0 +1,52 @@
+<form [formGroup]="commentFormGroup">
+  <div class="form-container">
+    <input class="text-input" formControlName="title" type="text" [placeholder]="'form.addTitlePlaceholder' | translate">
+
+    <textarea class="text-area" formControlName="text" cols="30" rows="10"></textarea>
+
+    <div>
+      <span>{{ 'form.addNewTagButton' | translate }}</span>
+
+      <div class="tag-container">
+        <app-tag-selector-input #tagSelector
+          [allTags]="availableTags"
+          [selectedTags]="tagFormArray.value"
+          (addNewTag)="addNewTag($event)">
+        </app-tag-selector-input>
+
+        <div class="tag-row">
+          <span>{{ 'form.actualTag' | translate }}:</span>
+
+          <div *ngFor="let tag of commentFormGroup.controls.tags.value; let i = index; trackBy: trackBy" class="tag">
+            <span>{{ tag }}</span>
+            <span class="remove-tag" (click)="removeTagByIndex(i)">x</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="!isCommentCreation" class="button-row">
+      <button
+        class="button add-button"
+        [class.inactive-button]="isInvalidForm"
+        [disabled]="isInvalidForm"
+        (click)="save()">
+        {{ 'common.save' | translate }}
+      </button>
+
+      <button class="button remove-button" (click)="cancel()">
+        {{ 'common.cancel' | translate }}
+      </button>
+    </div>
+
+    <div *ngIf="isCommentCreation" class="button-row">
+      <button
+        class="button add-button"
+        [class.inactive-button]="isInvalidForm"
+        [disabled]="isInvalidForm"
+        (click)="save()">
+        {{ 'common.add' | translate }}
+      </button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,19 @@
+:host {
+  @apply w-150 m-auto flex flex-col items-center h-full;
+}
+
+.filter-container {
+  @apply flex items-center justify-center h-20;
+}
+
+.comment-list {
+  @apply h-full overflow-x-auto;
+}
+
+.comment-header {
+  @apply flex items-center justify-between gap-2 mb-5;
+}
+
+.comment-form-container {
+  @apply mb-4 pt-1;
+}
